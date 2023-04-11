@@ -1,27 +1,30 @@
 import { useState } from 'react'
  
-const Counter = (props) => {
-    const [count, setCount] = useState(0)
+const Counter = ({stock, initial = 1, addItem}) => {
+    const [count, setCount] = useState(initial)
 
     const counterPlus = () => {
-        if (count < props.stock) {
+        if (count < stock) {
             setCount(count + 1)
         }
-        console.log(count)
     }
 
     const counterMinus = () => {
-        if (count >= 1) {
+        if (count > 1) {
             setCount(count - 1)
         }
-        console.log(count)
     }
 
     return (
         <div>
-            <button onClick={counterMinus}>-</button>
-            <p>{count}</p>
-            <button onClick={counterPlus}>+</button>
+            <div>
+                <button onClick={counterMinus}>-</button>
+                <p>{count}</p>
+                <button onClick={counterPlus}>+</button>
+            </div>
+            <div>
+                <button onClick={() => addItem(count)}>Agregar al carrito</button>
+            </div>
         </div>
     )
 }
