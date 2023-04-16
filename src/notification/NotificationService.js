@@ -1,6 +1,6 @@
 import { useState, createContext, useContext } from "react"
 
-export const Notification = ({type, text}) => {
+export const Notification = ({ type, text }) => {
     const notificationStyle = {
         position: 'absolute',
         top: 100,
@@ -10,7 +10,7 @@ export const Notification = ({type, text}) => {
         padding: '10px 20px 10px 20px',
         borderRadius: 10,
     }
-     
+
     return (
         <div style={notificationStyle}>
             <strong>{text}</strong>
@@ -20,23 +20,23 @@ export const Notification = ({type, text}) => {
 
 const NotificationContext = createContext()
 
-export const NotificationProvider = ({children}) => {
+export const NotificationProvider = ({ children }) => {
     const [notificationData, setNotificationData] = useState({
         type: 'succes',
         text: '',
-   })
+    })
 
-   const setNotification = (type, text) => {
-    setNotificationData({type, text}) 
-   }
+    const setNotification = (type, text) => {
+        setNotificationData({ type, text })
+    }
 
-   setTimeout(() => {
-    setNotificationData({type: 'succes', text: ''})
-   }, 5000);
+    setTimeout(() => {
+        setNotificationData({ type: 'succes', text: '' })
+    }, 5000);
 
     return (
-        <NotificationContext.Provider value={{setNotification}}>
-            {notificationData.text && <Notification {...notificationData}/>}
+        <NotificationContext.Provider value={{ setNotification }}>
+            {notificationData.text && <Notification {...notificationData} />}
             {children}
         </NotificationContext.Provider>
     )
