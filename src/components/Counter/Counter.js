@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import '../Counter/Counter.css';
  
 const Counter = ({stock, initial = 1, addItem}) => {
     const [count, setCount] = useState(initial)
@@ -16,14 +17,14 @@ const Counter = ({stock, initial = 1, addItem}) => {
     }
 
     return (
-        <div>
-            <div>
-                <button onClick={counterMinus}>-</button>
-                <p>{count}</p>
-                <button onClick={counterPlus}>+</button>
+        <div className='counterContainer'>
+            <div className='counterButtons'>
+                <button className='counterButton' onClick={counterMinus}>-</button>
+                <p className='countNumber'>{count}</p>
+                <button className='counterButton' onClick={counterPlus}>+</button>
             </div>
             <div>
-                <button onClick={() => addItem(count)}>Agregar al carrito</button>
+                <button className='counterAddToCart' onClick={() => addItem(count)}>Agregar al carrito</button>
             </div>
         </div>
     )

@@ -45,8 +45,10 @@ const ItemListContainer = ({greeting}) => {
 
     return (
         <div className="ItemListContainer">
-            <h2>{greeting}</h2>
-            <ItemList products={products}/>
+            <h2 className='greetingTitle'>{greeting}</h2>
+            <div className='itemCardConteiner'>
+                <ItemList products={products}/>
+            </div>
         </div>
     )
 }

@@ -1,10 +1,14 @@
 .ItemListContainer {
     text-align: center;
     margin-top: 10vh;
-    font-size: xx-large ;
 }
 
 .altTitle {
     text-align: center;
     margin-top: 30vh;
+}
+
+.greetingTitle {
+    margin-bottom: 10vh;
+    font-size: xx-large;
 }

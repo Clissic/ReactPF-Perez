@@ -1,0 +1,42 @@
+/* .counterContainer {
+
+} */
+
+.counterButtons {
+    margin: auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.counterButton {
+    all: unset;
+    color: rgb(0, 0, 0);
+    background-color: rgb(200, 200, 200);
+    border-radius: 50%;
+    width: 2.5vw;
+    height: 2.5vw;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.counterButton:active {
+    background-color: rgb(190, 190, 190);
+}
+
+.countNumber {
+    font-size: xx-large;
+}
+
+.counterAddToCart {
+    all: unset;
+    margin-top: 5vh;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: large;
+    background-color: rgb(44, 128, 255);
+    padding: 4px 12px 6px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}

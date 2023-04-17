@@ -1,3 +1,5 @@
-div {
+.ItemDetailContainer {
+    display: block;
     text-align: center;
+    margin-top: 10vh;
 }
