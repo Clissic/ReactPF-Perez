@@ -13,7 +13,7 @@ const ItemDetail = ({id, name, img, price, stock}) => {
 
     const handleAddItem = (count) => {
         const productToAdd = {
-            id, name, price, count
+            id, name, img, price, count
         }
         setCount(count)
         cartAddItem(productToAdd)
@@ -31,7 +31,7 @@ const ItemDetail = ({id, name, img, price, stock}) => {
                 {count > 0 ? (
                     <Link to='/cart'>Finalizar compra</Link>
                 ) : (
-                    <Counter stock={stock} addItem={handleAddItem}/>
+                    stock === 0 ? <h3>Sin stock</h3> : <Counter stock={stock} addItem={handleAddItem}/>
                 )}
             </footer>
         </div>
