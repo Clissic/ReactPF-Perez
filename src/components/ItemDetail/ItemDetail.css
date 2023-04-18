@@ -30,3 +30,30 @@
     margin: auto;
     grid-area: body;
 }
+
+.finalizarCompraButton {
+    all: unset;
+    margin-top: 5vh;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: large;
+    background-color: rgb(44, 128, 255);
+    padding: 4px 12px 6px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.finalizarCompraButton:visited {
+    color: white;
+}
+
+.sinStock {
+    all: unset;
+    margin-top: 5vh;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: large;
+    background-color: red;
+    padding: 4px 12px 6px 12px;
+    border-radius: 10px;
+}

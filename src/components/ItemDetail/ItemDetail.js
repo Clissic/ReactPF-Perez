@@ -32,9 +32,9 @@ const ItemDetail = ({ id, name, img, price, stock, description }) => {
                     <h3>Stock: {stock}</h3>
                     <footer>
                         {count > 0 ? (
-                            <Link to='/cart'>Finalizar compra</Link>
+                            <Link to='/cart' className='finalizarCompraButton'>Finalizar compra</Link>
                         ) : (
-                            stock === 0 ? <h3>Sin stock</h3> : <Counter stock={stock} addItem={handleAddItem} />
+                            stock === 0 ? <h3 className='sinStock'>SIN STOCK</h3> : <Counter stock={stock} addItem={handleAddItem} />
                         )}
                     </footer>
                 </div>

@@ -1,0 +1,37 @@
+.formCheckout {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+}
+
+.checkoutSubmitFormButton {
+    margin: auto;
+    width: 10vw;
+    height: 35px;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: large;
+    background-color: rgb(44, 128, 255);
+    padding: 4px 12px 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.checkoutFormInput {
+    padding: 0 10px 0 10px;
+    width: 15vw;
+    height: 25px;
+    border-radius: 20px;
+    border: 1px solid grey;
+}
+
+.labelForm {
+    font-weight: 700;
+    margin-bottom: 1vh;
+}
+
+.error {
+    color: red;
+    font-weight: 700;
+}

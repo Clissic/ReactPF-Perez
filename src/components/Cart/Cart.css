@@ -1,0 +1,102 @@
+.cart {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.carritoImg {
+    margin: 10vh;
+    width: 50vw;
+}
+
+.itemCartCard {
+    margin: auto auto 5vh auto;
+    width: 60vw;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 1.5fr .7fr;
+    grid-template-rows: 30vh;
+    grid-template-areas: "img name count price subTotal remove";
+    align-items: center;
+}
+
+.itemCartCardImg {
+    height: 80%;
+    grid-area: img;
+    margin: auto;
+}
+
+.itemCartCardName {
+    margin: auto;
+    width: 80%;
+    grid-area: name;
+}
+
+.itemCartCardPrice {
+    margin: auto;
+    width: 80%;
+    grid-area: price;
+}
+
+.itemCartCardSubTotal {
+    margin: auto;
+    width: 80%;
+    grid-area: subTotal;
+}
+
+.itemCartCardCount {
+    margin: auto;
+    width: 80%;
+    grid-area: count;
+}
+
+.totalItemsPrice {
+    font-size: x-large;
+}
+
+.removeItemFromCart {
+    all: unset;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    grid-area: remove;
+    background-color: rgb(189, 0, 0);
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cartFooterButtons {
+    display: flex;
+    width: 30vw;
+    margin: 5vh auto auto auto;
+    justify-content: space-around;
+}
+
+.cartFinalizarCompraButton {
+    all: unset;
+    width: 40%;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: large;
+    background-color: rgb(44, 128, 255);
+    padding: 4px 12px 6px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cartFinalizarCompraButton:visited {
+    color: white;
+}
+
+.vaciarCarritoButton {
+    all: unset;
+    width: 40%;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: large;
+    background-color: rgb(189, 0, 0);
+    padding: 4px 12px 6px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}

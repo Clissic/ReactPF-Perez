@@ -5,6 +5,7 @@ import { collection, documentId, query, where, getDocs, writeBatch, addDoc } fro
 import { db } from "../../services/firebase/firebaseConfig";
 import { useNotification } from "../../notification/NotificationService";
 import { useNavigate } from "react-router-dom";
+import "../Checkout/Checkout.css";
 
 const Checkout = ({ greeting }) => {
     const [orderId, setOrderId] = useState('')
@@ -76,9 +77,9 @@ const Checkout = ({ greeting }) => {
     }
 
     return (
-        <div>
-            <h2>{greeting}</h2>
-            {orderId ? <h3>Se genero orden Nro: {orderId}</h3> : <Form onConfirm={handleConfirm} />}
+        <div className="checkout">
+            <h2 className="greetingTitle">{greeting}</h2>
+            {orderId ? <h3>Se genero orden Nro: <strong>{orderId}</strong></h3> : <Form onConfirm={handleConfirm} />}
         </div>
     )
 }
