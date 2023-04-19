@@ -4,6 +4,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import NavBar from './components/NavBar/NavBar';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
+import Footer from './components/Footer/Footer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { CartProvider } from './context/CartContext';
 import { NotificationProvider } from './notification/NotificationService';
@@ -24,6 +25,7 @@ function App() {
               <Route path='/checkout' element={<Checkout greeting={"Checkout"} />}/>
             </Routes>
           </CartProvider>
+          <Footer />
         </BrowserRouter>
       </NotificationProvider>
     </div>
